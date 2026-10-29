@@ -8,3 +8,7 @@ node_modules/
 **/target/
 __pycache__/
 .venv/
+
+*.py[cod]
+dist/
+.angular/

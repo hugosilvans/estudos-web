@@ -1,340 +1,576 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Nexus Games: computadores, periféricos e acessórios para o seu setup gamer.">
-  <title>Nexus Games | Tecnologia para o seu setup</title>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Nexus Games: computadores, periféricos e acessórios para o seu setup gamer."
+    />
+    <title>Nexus Games | Tecnologia para o seu setup</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-  <header class="sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-dark nexus-navbar" aria-label="Navegação principal">
-      <div class="container">
-        <a class="navbar-brand" href="#inicio" aria-label="Nexus Games - Página inicial">
-          <span class="brand-mark"><i class="bi bi-controller" aria-hidden="true"></i></span>
-          NEXUS GAMES
-        </a>
+    <header class="sticky-top">
+      <nav
+        class="navbar navbar-expand-lg navbar-dark nexus-navbar"
+        aria-label="Navegação principal"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="#inicio" aria-label="Nexus Games - Página inicial">
+            <span class="brand-mark"><i class="bi bi-controller" aria-hidden="true"></i></span>
+            NEXUS GAMES
+          </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div class="collapse navbar-collapse" id="menuPrincipal">
-          <ul class="navbar-nav mx-lg-auto mb-3 mb-lg-0">
-            <li class="nav-item"><a class="nav-link active" href="#inicio">Início</a></li>
-            <li class="nav-item"><a class="nav-link" href="#destaques">Destaques</a></li>
-            <li class="nav-item"><a class="nav-link" href="#novidades">Novidades</a></li>
-            <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
-          </ul>
+          <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav mx-lg-auto mb-3 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" href="#inicio">Início</a></li>
+              <li class="nav-item"><a class="nav-link" href="#destaques">Destaques</a></li>
+              <li class="nav-item"><a class="nav-link" href="#novidades">Novidades</a></li>
+              <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+            </ul>
 
-          <form class="search-form d-flex mb-3 mb-lg-0" id="searchForm" role="search">
-            <label class="visually-hidden" for="searchInput">Buscar produtos</label>
-            <i class="bi bi-search" aria-hidden="true"></i>
-            <input id="searchInput" type="search" placeholder="Buscar produtos" autocomplete="off">
-          </form>
+            <form class="search-form d-flex mb-3 mb-lg-0" id="searchForm" role="search">
+              <label class="visually-hidden" for="searchInput">Buscar produtos</label>
+              <i class="bi bi-search" aria-hidden="true"></i>
+              <input
+                id="searchInput"
+                type="search"
+                placeholder="Buscar produtos"
+                autocomplete="off"
+              />
+            </form>
 
-          <div class="nav-actions ms-lg-3">
-            <a class="nav-action" href="login.html"><i class="bi bi-person" aria-hidden="true"></i> Conta</a>
-            <button class="nav-action cart-trigger" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartPanel" aria-controls="cartPanel">
-              <i class="bi bi-bag" aria-hidden="true"></i> Carrinho
-              <span id="cartCount" class="cart-count" aria-label="0 produtos no carrinho">0</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <main id="conteudo">
-    <section class="hero" id="inicio" aria-labelledby="heroTitle">
-      <div class="container">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-6 hero-copy">
-            <p class="eyebrow">NOVIDADES PARA O SEU SETUP</p>
-            <h1 id="heroTitle">Jogue no próximo nível.</h1>
-            <p class="hero-description">Computadores, periféricos e acessórios selecionados para desempenho, conforto e diversão.</p>
-            <a class="btn btn-primary btn-nexus" href="#destaques">Explorar produtos</a>
-          </div>
-          <div class="col-lg-6">
-            <div class="hero-art" aria-hidden="true">
-              <span class="hero-glow"></span>
-              <i class="bi bi-controller"></i>
+            <div class="nav-actions ms-lg-3">
+              <a class="nav-action" href="login.html"
+                ><i class="bi bi-person" aria-hidden="true"></i> Conta</a
+              >
+              <button
+                class="nav-action cart-trigger"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#cartPanel"
+                aria-controls="cartPanel"
+              >
+                <i class="bi bi-bag" aria-hidden="true"></i> Carrinho
+                <span id="cartCount" class="cart-count" aria-label="0 produtos no carrinho">0</span>
+              </button>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </nav>
+    </header>
 
-    <section class="category-section" aria-labelledby="categoryTitle">
-      <div class="container">
-        <div class="section-heading compact-heading">
-          <div>
-            <p class="section-kicker">ENCONTRE MAIS RÁPIDO</p>
-            <h2 id="categoryTitle">Compre por categoria</h2>
-          </div>
-          <button class="text-link category-filter active" type="button" data-filter="todos">Ver todos <i class="bi bi-arrow-right"></i></button>
-        </div>
-        <div class="row g-3" role="list" aria-label="Categorias de produtos">
-          <div class="col-6 col-lg-3" role="listitem">
-            <button class="category-card category-filter" type="button" data-filter="pc">
-              <i class="bi bi-pc-display-horizontal"></i><span>PC gamer</span>
-            </button>
-          </div>
-          <div class="col-6 col-lg-3" role="listitem">
-            <button class="category-card category-filter" type="button" data-filter="notebook">
-              <i class="bi bi-laptop"></i><span>Notebooks</span>
-            </button>
-          </div>
-          <div class="col-6 col-lg-3" role="listitem">
-            <button class="category-card category-filter" type="button" data-filter="celular">
-              <i class="bi bi-phone"></i><span>Celulares</span>
-            </button>
-          </div>
-          <div class="col-6 col-lg-3" role="listitem">
-            <button class="category-card category-filter" type="button" data-filter="perifericos">
-              <i class="bi bi-mouse3"></i><span>Periféricos</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="products-section" id="destaques" aria-labelledby="featuredTitle">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="section-kicker">SELEÇÃO NEXUS</p>
-            <h2 id="featuredTitle">Produtos em destaque</h2>
-          </div>
-          <p id="resultsLabel" class="results-label" aria-live="polite">8 produtos encontrados</p>
-        </div>
-
-        <div class="row g-4" id="productGrid">
-          <div class="col-sm-6 col-lg-3 product-item" data-category="perifericos" data-name="controle sem fio nexus x">
-            <article class="product-card h-100">
-              <div class="product-media"><i class="bi bi-controller" aria-hidden="true"></i><span class="product-chip">Mais vendido</span></div>
-              <span class="badge-nexus">Periféricos</span>
-              <h3>Controle sem fio Nexus X</h3>
-              <p class="product-description">Conexão estável e comandos precisos para longas sessões.</p>
-              <p class="product-price" data-price="349.90">R$ 349,90</p>
-              <button class="btn btn-primary btn-nexus w-100 add-to-cart" type="button"><i class="bi bi-bag-plus"></i> Adicionar</button>
-            </article>
-          </div>
-
-          <div class="col-sm-6 col-lg-3 product-item" data-category="perifericos" data-name="headset pulse 7.1">
-            <article class="product-card h-100">
-              <div class="product-media"><i class="bi bi-headset" aria-hidden="true"></i></div>
-              <span class="badge-nexus">Periféricos</span>
-              <h3>Headset Pulse 7.1</h3>
-              <p class="product-description">Som imersivo, microfone ajustável e conforto prolongado.</p>
-              <p class="product-price" data-price="429.90">R$ 429,90</p>
-              <button class="btn btn-primary btn-nexus w-100 add-to-cart" type="button"><i class="bi bi-bag-plus"></i> Adicionar</button>
-            </article>
-          </div>
-
-          <div class="col-sm-6 col-lg-3 product-item" data-category="perifericos" data-name="teclado mecânico spark">
-            <article class="product-card h-100">
-              <div class="product-media"><i class="bi bi-keyboard" aria-hidden="true"></i><span class="product-chip">Novo</span></div>
-              <span class="badge-nexus">Periféricos</span>
-              <h3>Teclado mecânico Spark</h3>
-              <p class="product-description">Resposta rápida, iluminação configurável e construção firme.</p>
-              <p class="product-price" data-price="519.90">R$ 519,90</p>
-              <button class="btn btn-primary btn-nexus w-100 add-to-cart" type="button"><i class="bi bi-bag-plus"></i> Adicionar</button>
-            </article>
-          </div>
-
-          <div class="col-sm-6 col-lg-3 product-item" data-category="perifericos" data-name="mouse vector pro">
-            <article class="product-card h-100">
-              <div class="product-media"><i class="bi bi-mouse3" aria-hidden="true"></i></div>
-              <span class="badge-nexus">Periféricos</span>
-              <h3>Mouse Vector Pro</h3>
-              <p class="product-description">Sensor de alta precisão e formato ergonômico.</p>
-              <p class="product-price" data-price="289.90">R$ 289,90</p>
-              <button class="btn btn-primary btn-nexus w-100 add-to-cart" type="button"><i class="bi bi-bag-plus"></i> Adicionar</button>
-            </article>
-          </div>
-
-          <div class="col-sm-6 col-lg-3 product-item" data-category="pc" data-name="desktop nexus core">
-            <article class="product-card h-100">
-              <div class="product-media"><i class="bi bi-pc-display-horizontal" aria-hidden="true"></i></div>
-              <span class="badge-nexus">PC gamer</span>
-              <h3>Desktop Nexus Core</h3>
-              <p class="product-description">Desempenho equilibrado para jogos, estudos e criação.</p>
-              <p class="product-price" data-price="4899.90">R$ 4.899,90</p>
-              <button class="btn btn-primary btn-nexus w-100 add-to-cart" type="button"><i class="bi bi-bag-plus"></i> Adicionar</button>
-            </article>
-          </div>
-
-          <div class="col-sm-6 col-lg-3 product-item" data-category="notebook" data-name="notebook vortex 15">
-            <article class="product-card h-100">
-              <div class="product-media"><i class="bi bi-laptop" aria-hidden="true"></i><span class="product-chip">Oferta</span></div>
-              <span class="badge-nexus">Notebooks</span>
-              <h3>Notebook Vortex 15</h3>
-              <p class="product-description">Tela fluida e potência portátil para jogar onde quiser.</p>
-              <p class="product-price" data-price="5699.90">R$ 5.699,90</p>
-              <button class="btn btn-primary btn-nexus w-100 add-to-cart" type="button"><i class="bi bi-bag-plus"></i> Adicionar</button>
-            </article>
-          </div>
-
-          <div class="col-sm-6 col-lg-3 product-item" data-category="celular" data-name="smartphone arena 5g">
-            <article class="product-card h-100">
-              <div class="product-media"><i class="bi bi-phone" aria-hidden="true"></i></div>
-              <span class="badge-nexus">Celulares</span>
-              <h3>Smartphone Arena 5G</h3>
-              <p class="product-description">Tela responsiva, bateria duradoura e conexão 5G.</p>
-              <p class="product-price" data-price="2399.90">R$ 2.399,90</p>
-              <button class="btn btn-primary btn-nexus w-100 add-to-cart" type="button"><i class="bi bi-bag-plus"></i> Adicionar</button>
-            </article>
-          </div>
-
-          <div class="col-sm-6 col-lg-3 product-item" data-category="perifericos" data-name="monitor horizon 27">
-            <article class="product-card h-100">
-              <div class="product-media"><i class="bi bi-display" aria-hidden="true"></i></div>
-              <span class="badge-nexus">Periféricos</span>
-              <h3>Monitor Horizon 27</h3>
-              <p class="product-description">Imagem nítida, 165 Hz e bordas finas para maior imersão.</p>
-              <p class="product-price" data-price="1799.90">R$ 1.799,90</p>
-              <button class="btn btn-primary btn-nexus w-100 add-to-cart" type="button"><i class="bi bi-bag-plus"></i> Adicionar</button>
-            </article>
-          </div>
-        </div>
-
-        <div id="emptyResults" class="empty-results d-none" role="status">
-          <i class="bi bi-search"></i>
-          <h3>Nenhum produto encontrado</h3>
-          <p>Tente outro termo ou volte a visualizar todas as categorias.</p>
-          <button class="btn btn-outline-primary category-filter" type="button" data-filter="todos">Limpar filtros</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="news-section" id="novidades" aria-labelledby="newsTitle">
-      <div class="container">
-        <div class="section-heading light-heading">
-          <div>
-            <p class="section-kicker">ACABOU DE CHEGAR</p>
-            <h2 id="newsTitle">Novidades para jogar melhor</h2>
-          </div>
-          <p>Produtos selecionados para atualizar seu setup.</p>
-        </div>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <article class="news-card">
-              <span class="news-number">01</span><i class="bi bi-gpu-card" aria-hidden="true"></i>
-              <h3>Mais desempenho</h3><p>Componentes escolhidos para manter seus jogos fluidos e estáveis.</p>
-            </article>
-          </div>
-          <div class="col-md-4">
-            <article class="news-card featured-news">
-              <span class="news-number">02</span><i class="bi bi-stars" aria-hidden="true"></i>
-              <h3>Setup mais completo</h3><p>Periféricos que combinam precisão, conforto e visual limpo.</p>
-            </article>
-          </div>
-          <div class="col-md-4">
-            <article class="news-card">
-              <span class="news-number">03</span><i class="bi bi-lightning-charge" aria-hidden="true"></i>
-              <h3>Conexão rápida</h3><p>Equipamentos preparados para sua rotina dentro e fora dos jogos.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="gallery-section" id="galeria" aria-labelledby="galleryTitle">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="section-kicker">INSPIRAÇÃO</p>
-            <h2 id="galleryTitle">Galeria Nexus</h2>
-          </div>
-          <p>Explore possibilidades para o seu espaço gamer.</p>
-        </div>
-        <div id="nexusCarousel" class="carousel slide gallery-carousel" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#nexusCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#nexusCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#nexusCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="gallery-slide slide-blue">
-                <div><span>PERIFÉRICOS</span><h3>Controle total em cada partida.</h3><p>Precisão e conforto para você manter o foco no jogo.</p></div>
-                <i class="bi bi-controller" aria-hidden="true"></i>
-              </div>
+    <main id="conteudo">
+      <section class="hero" id="inicio" aria-labelledby="heroTitle">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6 hero-copy">
+              <p class="eyebrow">NOVIDADES PARA O SEU SETUP</p>
+              <h1 id="heroTitle">Jogue no próximo nível.</h1>
+              <p class="hero-description">
+                Computadores, periféricos e acessórios selecionados para desempenho, conforto e
+                diversão.
+              </p>
+              <a class="btn btn-primary btn-nexus" href="#destaques">Explorar produtos</a>
             </div>
-            <div class="carousel-item">
-              <div class="gallery-slide slide-dark">
-                <div><span>ÁUDIO</span><h3>Ouça cada detalhe.</h3><p>Som envolvente para comunicação e imersão.</p></div>
-                <i class="bi bi-headset" aria-hidden="true"></i>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="gallery-slide slide-cyan">
-                <div><span>DESEMPENHO</span><h3>Seu setup, no seu ritmo.</h3><p>Tecnologia preparada para jogar, estudar e criar.</p></div>
-                <i class="bi bi-pc-display-horizontal" aria-hidden="true"></i>
+            <div class="col-lg-6">
+              <div class="hero-art" aria-hidden="true">
+                <span class="hero-glow"></span>
+                <i class="bi bi-controller"></i>
               </div>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#nexusCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Anterior</span></button>
-          <button class="carousel-control-next" type="button" data-bs-target="#nexusCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Próximo</span></button>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="trust-bar" aria-label="Vantagens da loja">
+      <section class="category-section" aria-labelledby="categoryTitle">
+        <div class="container">
+          <div class="section-heading compact-heading">
+            <div>
+              <p class="section-kicker">ENCONTRE MAIS RÁPIDO</p>
+              <h2 id="categoryTitle">Compre por categoria</h2>
+            </div>
+            <button class="text-link category-filter active" type="button" data-filter="todos">
+              Ver todos <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+          <div class="row g-3" role="list" aria-label="Categorias de produtos">
+            <div class="col-6 col-lg-3" role="listitem">
+              <button class="category-card category-filter" type="button" data-filter="pc">
+                <i class="bi bi-pc-display-horizontal"></i><span>PC gamer</span>
+              </button>
+            </div>
+            <div class="col-6 col-lg-3" role="listitem">
+              <button class="category-card category-filter" type="button" data-filter="notebook">
+                <i class="bi bi-laptop"></i><span>Notebooks</span>
+              </button>
+            </div>
+            <div class="col-6 col-lg-3" role="listitem">
+              <button class="category-card category-filter" type="button" data-filter="celular">
+                <i class="bi bi-phone"></i><span>Celulares</span>
+              </button>
+            </div>
+            <div class="col-6 col-lg-3" role="listitem">
+              <button class="category-card category-filter" type="button" data-filter="perifericos">
+                <i class="bi bi-mouse3"></i><span>Periféricos</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="products-section" id="destaques" aria-labelledby="featuredTitle">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">SELEÇÃO NEXUS</p>
+              <h2 id="featuredTitle">Produtos em destaque</h2>
+            </div>
+            <p id="resultsLabel" class="results-label" aria-live="polite">8 produtos encontrados</p>
+          </div>
+
+          <div class="row g-4" id="productGrid">
+            <div
+              class="col-sm-6 col-lg-3 product-item"
+              data-category="perifericos"
+              data-name="controle sem fio nexus x"
+            >
+              <article class="product-card h-100">
+                <div class="product-media">
+                  <i class="bi bi-controller" aria-hidden="true"></i
+                  ><span class="product-chip">Mais vendido</span>
+                </div>
+                <span class="badge-nexus">Periféricos</span>
+                <h3>Controle sem fio Nexus X</h3>
+                <p class="product-description">
+                  Conexão estável e comandos precisos para longas sessões.
+                </p>
+                <p class="product-price" data-price="349.90">R$ 349,90</p>
+                <button class="btn btn-primary btn-nexus w-100 add-to-cart" type="button">
+                  <i class="bi bi-bag-plus"></i> Adicionar
+                </button>
+              </article>
+            </div>
+
+            <div
+              class="col-sm-6 col-lg-3 product-item"
+              data-category="perifericos"
+              data-name="headset pulse 7.1"
+            >
+              <article class="product-card h-100">
+                <div class="product-media"><i class="bi bi-headset" aria-hidden="true"></i></div>
+                <span class="badge-nexus">Periféricos</span>
+                <h3>Headset Pulse 7.1</h3>
+                <p class="product-description">
+                  Som imersivo, microfone ajustável e conforto prolongado.
+                </p>
+                <p class="product-price" data-price="429.90">R$ 429,90</p>
+                <button class="btn btn-primary btn-nexus w-100 add-to-cart" type="button">
+                  <i class="bi bi-bag-plus"></i> Adicionar
+                </button>
+              </article>
+            </div>
+
+            <div
+              class="col-sm-6 col-lg-3 product-item"
+              data-category="perifericos"
+              data-name="teclado mecânico spark"
+            >
+              <article class="product-card h-100">
+                <div class="product-media">
+                  <i class="bi bi-keyboard" aria-hidden="true"></i
+                  ><span class="product-chip">Novo</span>
+                </div>
+                <span class="badge-nexus">Periféricos</span>
+                <h3>Teclado mecânico Spark</h3>
+                <p class="product-description">
+                  Resposta rápida, iluminação configurável e construção firme.
+                </p>
+                <p class="product-price" data-price="519.90">R$ 519,90</p>
+                <button class="btn btn-primary btn-nexus w-100 add-to-cart" type="button">
+                  <i class="bi bi-bag-plus"></i> Adicionar
+                </button>
+              </article>
+            </div>
+
+            <div
+              class="col-sm-6 col-lg-3 product-item"
+              data-category="perifericos"
+              data-name="mouse vector pro"
+            >
+              <article class="product-card h-100">
+                <div class="product-media"><i class="bi bi-mouse3" aria-hidden="true"></i></div>
+                <span class="badge-nexus">Periféricos</span>
+                <h3>Mouse Vector Pro</h3>
+                <p class="product-description">Sensor de alta precisão e formato ergonômico.</p>
+                <p class="product-price" data-price="289.90">R$ 289,90</p>
+                <button class="btn btn-primary btn-nexus w-100 add-to-cart" type="button">
+                  <i class="bi bi-bag-plus"></i> Adicionar
+                </button>
+              </article>
+            </div>
+
+            <div
+              class="col-sm-6 col-lg-3 product-item"
+              data-category="pc"
+              data-name="desktop nexus core"
+            >
+              <article class="product-card h-100">
+                <div class="product-media">
+                  <i class="bi bi-pc-display-horizontal" aria-hidden="true"></i>
+                </div>
+                <span class="badge-nexus">PC gamer</span>
+                <h3>Desktop Nexus Core</h3>
+                <p class="product-description">
+                  Desempenho equilibrado para jogos, estudos e criação.
+                </p>
+                <p class="product-price" data-price="4899.90">R$ 4.899,90</p>
+                <button class="btn btn-primary btn-nexus w-100 add-to-cart" type="button">
+                  <i class="bi bi-bag-plus"></i> Adicionar
+                </button>
+              </article>
+            </div>
+
+            <div
+              class="col-sm-6 col-lg-3 product-item"
+              data-category="notebook"
+              data-name="notebook vortex 15"
+            >
+              <article class="product-card h-100">
+                <div class="product-media">
+                  <i class="bi bi-laptop" aria-hidden="true"></i
+                  ><span class="product-chip">Oferta</span>
+                </div>
+                <span class="badge-nexus">Notebooks</span>
+                <h3>Notebook Vortex 15</h3>
+                <p class="product-description">
+                  Tela fluida e potência portátil para jogar onde quiser.
+                </p>
+                <p class="product-price" data-price="5699.90">R$ 5.699,90</p>
+                <button class="btn btn-primary btn-nexus w-100 add-to-cart" type="button">
+                  <i class="bi bi-bag-plus"></i> Adicionar
+                </button>
+              </article>
+            </div>
+
+            <div
+              class="col-sm-6 col-lg-3 product-item"
+              data-category="celular"
+              data-name="smartphone arena 5g"
+            >
+              <article class="product-card h-100">
+                <div class="product-media"><i class="bi bi-phone" aria-hidden="true"></i></div>
+                <span class="badge-nexus">Celulares</span>
+                <h3>Smartphone Arena 5G</h3>
+                <p class="product-description">Tela responsiva, bateria duradoura e conexão 5G.</p>
+                <p class="product-price" data-price="2399.90">R$ 2.399,90</p>
+                <button class="btn btn-primary btn-nexus w-100 add-to-cart" type="button">
+                  <i class="bi bi-bag-plus"></i> Adicionar
+                </button>
+              </article>
+            </div>
+
+            <div
+              class="col-sm-6 col-lg-3 product-item"
+              data-category="perifericos"
+              data-name="monitor horizon 27"
+            >
+              <article class="product-card h-100">
+                <div class="product-media"><i class="bi bi-display" aria-hidden="true"></i></div>
+                <span class="badge-nexus">Periféricos</span>
+                <h3>Monitor Horizon 27</h3>
+                <p class="product-description">
+                  Imagem nítida, 165 Hz e bordas finas para maior imersão.
+                </p>
+                <p class="product-price" data-price="1799.90">R$ 1.799,90</p>
+                <button class="btn btn-primary btn-nexus w-100 add-to-cart" type="button">
+                  <i class="bi bi-bag-plus"></i> Adicionar
+                </button>
+              </article>
+            </div>
+          </div>
+
+          <div id="emptyResults" class="empty-results d-none" role="status">
+            <i class="bi bi-search"></i>
+            <h3>Nenhum produto encontrado</h3>
+            <p>Tente outro termo ou volte a visualizar todas as categorias.</p>
+            <button
+              class="btn btn-outline-primary category-filter"
+              type="button"
+              data-filter="todos"
+            >
+              Limpar filtros
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="news-section" id="novidades" aria-labelledby="newsTitle">
+        <div class="container">
+          <div class="section-heading light-heading">
+            <div>
+              <p class="section-kicker">ACABOU DE CHEGAR</p>
+              <h2 id="newsTitle">Novidades para jogar melhor</h2>
+            </div>
+            <p>Produtos selecionados para atualizar seu setup.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <article class="news-card">
+                <span class="news-number">01</span><i class="bi bi-gpu-card" aria-hidden="true"></i>
+                <h3>Mais desempenho</h3>
+                <p>Componentes escolhidos para manter seus jogos fluidos e estáveis.</p>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="news-card featured-news">
+                <span class="news-number">02</span><i class="bi bi-stars" aria-hidden="true"></i>
+                <h3>Setup mais completo</h3>
+                <p>Periféricos que combinam precisão, conforto e visual limpo.</p>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="news-card">
+                <span class="news-number">03</span
+                ><i class="bi bi-lightning-charge" aria-hidden="true"></i>
+                <h3>Conexão rápida</h3>
+                <p>Equipamentos preparados para sua rotina dentro e fora dos jogos.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery-section" id="galeria" aria-labelledby="galleryTitle">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">INSPIRAÇÃO</p>
+              <h2 id="galleryTitle">Galeria Nexus</h2>
+            </div>
+            <p>Explore possibilidades para o seu espaço gamer.</p>
+          </div>
+          <div id="nexusCarousel" class="carousel slide gallery-carousel" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#nexusCarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#nexusCarousel"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#nexusCarousel"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="gallery-slide slide-blue">
+                  <div>
+                    <span>PERIFÉRICOS</span>
+                    <h3>Controle total em cada partida.</h3>
+                    <p>Precisão e conforto para você manter o foco no jogo.</p>
+                  </div>
+                  <i class="bi bi-controller" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="gallery-slide slide-dark">
+                  <div>
+                    <span>ÁUDIO</span>
+                    <h3>Ouça cada detalhe.</h3>
+                    <p>Som envolvente para comunicação e imersão.</p>
+                  </div>
+                  <i class="bi bi-headset" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="gallery-slide slide-cyan">
+                  <div>
+                    <span>DESEMPENHO</span>
+                    <h3>Seu setup, no seu ritmo.</h3>
+                    <p>Tecnologia preparada para jogar, estudar e criar.</p>
+                  </div>
+                  <i class="bi bi-pc-display-horizontal" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#nexusCarousel"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span
+              ><span class="visually-hidden">Anterior</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#nexusCarousel"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span
+              ><span class="visually-hidden">Próximo</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-bar" aria-label="Vantagens da loja">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-md-4 trust-item">
+              <i class="bi bi-shield-check"></i>
+              <div><strong>Compra segura</strong><span>Seus dados protegidos</span></div>
+            </div>
+            <div class="col-md-4 trust-item">
+              <i class="bi bi-chat-dots"></i>
+              <div><strong>Atendimento direto</strong><span>Telefone e e-mail</span></div>
+            </div>
+            <div class="col-md-4 trust-item">
+              <i class="bi bi-eye-slash"></i>
+              <div><strong>Informação clara</strong><span>Sem anúncios invasivos</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
       <div class="container">
-        <div class="row g-4">
-          <div class="col-md-4 trust-item"><i class="bi bi-shield-check"></i><div><strong>Compra segura</strong><span>Seus dados protegidos</span></div></div>
-          <div class="col-md-4 trust-item"><i class="bi bi-chat-dots"></i><div><strong>Atendimento direto</strong><span>Telefone e e-mail</span></div></div>
-          <div class="col-md-4 trust-item"><i class="bi bi-eye-slash"></i><div><strong>Informação clara</strong><span>Sem anúncios invasivos</span></div></div>
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <a class="footer-brand" href="#inicio"><i class="bi bi-controller"></i> NEXUS GAMES</a>
+            <p>Tecnologia e diversão para todos os níveis.</p>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h2>Navegação</h2>
+            <ul>
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#destaques">Produtos</a></li>
+              <li><a href="#galeria">Galeria</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-3">
+            <h2>Atendimento</h2>
+            <address>
+              (61) 3333-4444<br /><a href="mailto:contato@nexusgames.com.br"
+                >contato@nexusgames.com.br</a
+              ><br />Brasília • DF
+            </address>
+          </div>
+          <div class="col-lg-3">
+            <h2>Siga a Nexus</h2>
+            <div class="social-links">
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a
+              ><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a
+              ><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span class="current-year"></span> Nexus Games.</span
+          ><span>Projeto acadêmico • Hugo da Silva Nunes</span>
         </div>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-lg-4"><a class="footer-brand" href="#inicio"><i class="bi bi-controller"></i> NEXUS GAMES</a><p>Tecnologia e diversão para todos os níveis.</p></div>
-        <div class="col-6 col-lg-2"><h2>Navegação</h2><ul><li><a href="#inicio">Início</a></li><li><a href="#destaques">Produtos</a></li><li><a href="#galeria">Galeria</a></li></ul></div>
-        <div class="col-6 col-lg-3"><h2>Atendimento</h2><address>(61) 3333-4444<br><a href="mailto:contato@nexusgames.com.br">contato@nexusgames.com.br</a><br>Brasília • DF</address></div>
-        <div class="col-lg-3"><h2>Siga a Nexus</h2><div class="social-links"><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></div></div>
+    <aside
+      class="offcanvas offcanvas-end cart-panel"
+      tabindex="-1"
+      id="cartPanel"
+      aria-labelledby="cartPanelTitle"
+    >
+      <div class="offcanvas-header">
+        <div>
+          <p class="section-kicker mb-1">SEU PEDIDO</p>
+          <h2 class="offcanvas-title" id="cartPanelTitle">Carrinho</h2>
+        </div>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Fechar"
+        ></button>
       </div>
-      <div class="footer-bottom"><span>© <span class="current-year"></span> Nexus Games.</span><span>Projeto acadêmico • Hugo da Silva Nunes</span></div>
-    </div>
-  </footer>
+      <div class="offcanvas-body d-flex flex-column">
+        <div id="cartEmpty" class="cart-empty">
+          <i class="bi bi-bag"></i>
+          <h3>Seu carrinho está vazio</h3>
+          <p>Adicione produtos para visualizar o resumo.</p>
+        </div>
+        <div id="cartItems" class="cart-items"></div>
+        <div id="cartSummary" class="cart-summary d-none mt-auto">
+          <div><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div>
+          <button class="btn btn-primary btn-nexus w-100" type="button" id="checkoutButton">
+            Continuar compra
+          </button>
+          <button class="btn btn-link text-danger w-100" type="button" id="clearCart">
+            Limpar carrinho
+          </button>
+        </div>
+      </div>
+    </aside>
 
-  <aside class="offcanvas offcanvas-end cart-panel" tabindex="-1" id="cartPanel" aria-labelledby="cartPanelTitle">
-    <div class="offcanvas-header"><div><p class="section-kicker mb-1">SEU PEDIDO</p><h2 class="offcanvas-title" id="cartPanelTitle">Carrinho</h2></div><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button></div>
-    <div class="offcanvas-body d-flex flex-column">
-      <div id="cartEmpty" class="cart-empty"><i class="bi bi-bag"></i><h3>Seu carrinho está vazio</h3><p>Adicione produtos para visualizar o resumo.</p></div>
-      <div id="cartItems" class="cart-items"></div>
-      <div id="cartSummary" class="cart-summary d-none mt-auto">
-        <div><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div>
-        <button class="btn btn-primary btn-nexus w-100" type="button" id="checkoutButton">Continuar compra</button>
-        <button class="btn btn-link text-danger w-100" type="button" id="clearCart">Limpar carrinho</button>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="feedbackToast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+        <div class="toast-header">
+          <i class="bi bi-check-circle-fill text-success me-2"></i
+          ><strong class="me-auto">Nexus Games</strong
+          ><button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Fechar"
+          ></button>
+        </div>
+        <div class="toast-body" id="toastMessage">Produto adicionado ao carrinho.</div>
       </div>
     </div>
-  </aside>
 
-  <div class="toast-container position-fixed bottom-0 end-0 p-3">
-    <div id="feedbackToast" class="toast" role="status" aria-live="polite" aria-atomic="true">
-      <div class="toast-header"><i class="bi bi-check-circle-fill text-success me-2"></i><strong class="me-auto">Nexus Games</strong><button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Fechar"></button></div>
-      <div class="toast-body" id="toastMessage">Produto adicionado ao carrinho.</div>
-    </div>
-  </div>
-
-  <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>

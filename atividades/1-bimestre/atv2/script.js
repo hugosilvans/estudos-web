@@ -87,20 +87,20 @@ for(let i = 1; i <= linhas; i++){
 */
 
 //EXERCÍCIO 05
-let qtd = Number(prompt("Digite a quantidade de termos: "));
+let qtd = Number(prompt('Digite a quantidade de termos: '));
 let termo = 1;
 let soma = 0;
-let sequencia = "";
-for(let i = 1; i <= qtd; i++){
-    soma = soma + termo;
-    termo = termo * 10 + 1;
-    
-if(i === qtd){
+let sequencia = '';
+for (let i = 1; i <= qtd; i++) {
+  soma = soma + termo;
+  termo = termo * 10 + 1;
+
+  if (i === qtd) {
     sequencia = sequencia + termo;
-    } else {
-    sequencia = sequencia + termo + " + ";
-    }
+  } else {
+    sequencia = sequencia + termo + ' + ';
+  }
 }
 
 console.log(sequencia);
-console.log("A soma é: ", soma);
+console.log('A soma é: ', soma);

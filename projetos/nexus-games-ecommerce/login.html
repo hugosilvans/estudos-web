@@ -1,85 +1,137 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Acesse sua conta Nexus Games.">
-  <title>Entrar | Nexus Games</title>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body class="login-page">
-  <a class="skip-link" href="#loginForm">Pular para o formulário</a>
-  <main class="login-shell">
-    <section class="login-showcase" aria-labelledby="showcaseTitle">
-      <a class="login-brand" href="index.html"><span class="brand-mark"><i class="bi bi-controller"></i></span> NEXUS GAMES</a>
-      <div class="showcase-content">
-        <p class="eyebrow">SUA CONTA NEXUS</p>
-        <h1 id="showcaseTitle">Seu setup começa aqui.</h1>
-        <p>Acesse sua conta para acompanhar pedidos e organizar seus produtos favoritos.</p>
-        <div class="showcase-art" aria-hidden="true"><i class="bi bi-controller"></i></div>
-        <ul class="showcase-list">
-          <li><i class="bi bi-check2"></i> Acompanhe seus pedidos</li>
-          <li><i class="bi bi-check2"></i> Salve produtos favoritos</li>
-          <li><i class="bi bi-check2"></i> Compre com mais agilidade</li>
-        </ul>
-      </div>
-      <p class="showcase-footer">Tecnologia e diversão para todos os níveis.</p>
-    </section>
-
-    <section class="login-form-panel" aria-labelledby="loginTitle">
-      <div class="login-form-wrap">
-        <a class="back-link" href="index.html"><i class="bi bi-arrow-left"></i> Voltar para a loja</a>
-        <div class="login-heading">
-          <p class="section-kicker">BEM-VINDO DE VOLTA</p>
-          <h2 id="loginTitle">Entre na sua conta</h2>
-          <p>Informe seus dados para continuar.</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Acesse sua conta Nexus Games." />
+    <title>Entrar | Nexus Games</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="login-page">
+    <a class="skip-link" href="#loginForm">Pular para o formulário</a>
+    <main class="login-shell">
+      <section class="login-showcase" aria-labelledby="showcaseTitle">
+        <a class="login-brand" href="index.html"
+          ><span class="brand-mark"><i class="bi bi-controller"></i></span> NEXUS GAMES</a
+        >
+        <div class="showcase-content">
+          <p class="eyebrow">SUA CONTA NEXUS</p>
+          <h1 id="showcaseTitle">Seu setup começa aqui.</h1>
+          <p>Acesse sua conta para acompanhar pedidos e organizar seus produtos favoritos.</p>
+          <div class="showcase-art" aria-hidden="true"><i class="bi bi-controller"></i></div>
+          <ul class="showcase-list">
+            <li><i class="bi bi-check2"></i> Acompanhe seus pedidos</li>
+            <li><i class="bi bi-check2"></i> Salve produtos favoritos</li>
+            <li><i class="bi bi-check2"></i> Compre com mais agilidade</li>
+          </ul>
         </div>
+        <p class="showcase-footer">Tecnologia e diversão para todos os níveis.</p>
+      </section>
 
-        <div id="loginAlert" class="alert d-none" role="alert"></div>
+      <section class="login-form-panel" aria-labelledby="loginTitle">
+        <div class="login-form-wrap">
+          <a class="back-link" href="index.html"
+            ><i class="bi bi-arrow-left"></i> Voltar para a loja</a
+          >
+          <div class="login-heading">
+            <p class="section-kicker">BEM-VINDO DE VOLTA</p>
+            <h2 id="loginTitle">Entre na sua conta</h2>
+            <p>Informe seus dados para continuar.</p>
+          </div>
 
-        <form id="loginForm" novalidate>
-          <div class="mb-4">
-            <label class="form-label" for="email">E-mail</label>
-            <div class="input-group nexus-input-group">
-              <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-              <input class="form-control" type="email" id="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email" required>
-              <div class="invalid-feedback">Digite um e-mail válido.</div>
+          <div id="loginAlert" class="alert d-none" role="alert"></div>
+
+          <form id="loginForm" novalidate>
+            <div class="mb-4">
+              <label class="form-label" for="email">E-mail</label>
+              <div class="input-group nexus-input-group">
+                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                <input
+                  class="form-control"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="seuemail@exemplo.com"
+                  autocomplete="email"
+                  required
+                />
+                <div class="invalid-feedback">Digite um e-mail válido.</div>
+              </div>
             </div>
-          </div>
 
-          <div class="mb-3">
-            <label class="form-label" for="password">Senha</label>
-            <div class="input-group nexus-input-group">
-              <span class="input-group-text"><i class="bi bi-lock"></i></span>
-              <input class="form-control" type="password" id="password" name="password" placeholder="Mínimo de 6 caracteres" autocomplete="current-password" minlength="6" required>
-              <button class="btn password-toggle" type="button" id="togglePassword" aria-label="Mostrar senha"><i class="bi bi-eye"></i></button>
-              <div class="invalid-feedback">A senha deve ter pelo menos 6 caracteres.</div>
+            <div class="mb-3">
+              <label class="form-label" for="password">Senha</label>
+              <div class="input-group nexus-input-group">
+                <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                <input
+                  class="form-control"
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Mínimo de 6 caracteres"
+                  autocomplete="current-password"
+                  minlength="6"
+                  required
+                />
+                <button
+                  class="btn password-toggle"
+                  type="button"
+                  id="togglePassword"
+                  aria-label="Mostrar senha"
+                >
+                  <i class="bi bi-eye"></i>
+                </button>
+                <div class="invalid-feedback">A senha deve ter pelo menos 6 caracteres.</div>
+              </div>
             </div>
-          </div>
 
-          <div class="login-options mb-4">
-            <div class="form-check"><input class="form-check-input" type="checkbox" id="remember"><label class="form-check-label" for="remember">Lembrar meu e-mail</label></div>
-            <button class="forgot-link" type="button" id="forgotPassword">Esqueci minha senha</button>
-          </div>
+            <div class="login-options mb-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="remember" /><label
+                  class="form-check-label"
+                  for="remember"
+                  >Lembrar meu e-mail</label
+                >
+              </div>
+              <button class="forgot-link" type="button" id="forgotPassword">
+                Esqueci minha senha
+              </button>
+            </div>
 
-          <button class="btn btn-primary btn-nexus btn-login w-100" type="submit"><span>Entrar</span><i class="bi bi-arrow-right"></i></button>
-        </form>
+            <button class="btn btn-primary btn-nexus btn-login w-100" type="submit">
+              <span>Entrar</span><i class="bi bi-arrow-right"></i>
+            </button>
+          </form>
 
-        <div class="login-divider"><span>ou</span></div>
-        <p class="signup-copy">Ainda não tem uma conta? <button type="button" id="createAccount">Criar conta</button></p>
-        <p class="demo-note"><i class="bi bi-info-circle"></i> Esta é uma demonstração acadêmica. Nenhum dado é enviado.</p>
-      </div>
-    </section>
-  </main>
+          <div class="login-divider"><span>ou</span></div>
+          <p class="signup-copy">
+            Ainda não tem uma conta? <button type="button" id="createAccount">Criar conta</button>
+          </p>
+          <p class="demo-note">
+            <i class="bi bi-info-circle"></i> Esta é uma demonstração acadêmica. Nenhum dado é
+            enviado.
+          </p>
+        </div>
+      </section>
+    </main>
 
-  <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/login.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/login.js"></script>
+  </body>
 </html>

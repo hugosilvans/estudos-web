@@ -1,28 +1,12 @@
-//Criar parâmetros de conexão (credenciais)
-
 const mysql = require('mysql2');
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'HGucb32026@',
-  database: 'crud_project',
-  port: '3306'
+
+// O pool reutiliza conexões. Credenciais pertencem ao ambiente, nunca ao Git.
+const pool = mysql.createPool({
+  host: process.env.DB_HOST || 'localhost',
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASSWORD || '',
+  database: process.env.DB_NAME || 'crud_project',
+  port: Number(process.env.DB_PORT || 3306),
 });
 
-//Estabelecer conexão com o banco
-
-connection.connect(err =>{
-    if(err) throw err;
-    console.log('conectado ao banco de dados');
-});
-
-//Exportar o módulo
-module.exports = connection;
-
-connection.query('SELECT 1 + 1 AS solution', (err, rows, fields) => {
-  if (err) throw err;
-
-  console.log('The solution is: ', rows[0].solution);
-});
-
-connection.end();
+module.exports = pool;

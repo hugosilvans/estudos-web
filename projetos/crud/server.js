@@ -1,31 +1,17 @@
-const express = require('express')
-const app = express()
-const port = 3000
-
-//informar o caminho dos arquivos estáticos
-
-const path = require('path');
-app.use(express.static(path.join(__dirname, 'public')));
-
-//conectar ao banco
-
-const connection = require('./db')
-
-//ROTA PRINCIPAL
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-  //cd projeto-crud/public/index.html
-})
-
-//puxar rotas criadas em api.js
-//server.js: exportação
-
+const express = require('express');
+const path = require('node:path');
 const apiRoutes = require('./routes/api');
-//json
-app.use(express.json());
-app.use('api/users', apiRoutes); //caminho p chegar em api.js
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+const app = express();
+const port = Number(process.env.PORT || 3000);
+
+// O JSON deve ser interpretado antes de chegar às rotas que acessam req.body.
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/api/users', apiRoutes);
+
+// Exportar o app permite testar as rotas sem abrir uma porta durante o import.
+if (require.main === module) {
+  app.listen(port, () => console.log(`Servidor em http://localhost:${port}`));
+}
+module.exports = app;

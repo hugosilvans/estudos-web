@@ -1,5 +1,5 @@
-let botao = document.getElementById("botao");
+let botao = document.getElementById('botao');
 
-botao.addEventListener("click", function(){
-    alert("Botão Clicado");
+botao.addEventListener('click', function () {
+  alert('Botão Clicado');
 });

@@ -26,7 +26,7 @@ img {
   max-width: 600px;
   margin: 30px auto;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 section {
@@ -40,11 +40,11 @@ h2 {
 }
 
 p {
-    text-align: justify;
+  text-align: justify;
 }
 
 h3 {
-    text-align: left;
+  text-align: left;
 }
 
 ul {

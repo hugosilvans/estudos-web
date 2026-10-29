@@ -1,66 +1,51 @@
-//Contador de Cliques
-let increment = document.getElementById("increment");
-let decrement = document.getElementById("decrement");
-let resultado = document.getElementById("resultado");
-let ncliques = 0;
-increment.onclick = function(){
-    ncliques = ncliques + 1;
-    let saida = `<b>${ncliques}</b>`;
-    document.getElementById("resultado").innerHTML = saida;
+// Cada parte usa suas próprias referências para evitar declarações duplicadas.
+const increment = document.getElementById('increment');
+const decrement = document.getElementById('decrement');
+const resultado = document.getElementById('resultado');
+let cliques = 0;
+
+function atualizarContador(delta) {
+  cliques = Math.max(0, cliques + delta);
+  resultado.textContent = String(cliques);
 }
-decrement.onclick = function(){
-    ncliques = ncliques - 1;
-    if(ncliques < 0){
-        alert("Erro: Só é válido números positivos!");
-        ncliques = 0;
-    }
-    let saida = `<b>${ncliques}</b>`;
-    document.getElementById("resultado").innerHTML = saida;
-}
+increment.addEventListener('click', () => atualizarContador(1));
+decrement.addEventListener('click', () => atualizarContador(-1));
 
-//Texto dinâmico
-let campo = document.getElementById("input");
-let resultado1 = document.getElementById("resultado1");
+const entradaTexto = document.getElementById('input');
+const resultadoTexto = document.getElementById('resultado1');
+entradaTexto.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    // O usuário está fornecendo texto; não interprete o conteúdo como HTML.
+    resultadoTexto.textContent = entradaTexto.value;
+    entradaTexto.value = '';
+  }
+});
 
-campo.onkeydown = function(event){
-    if(event.key == "Enter"){
-         resultado1.innerHTML = campo.value;
-        campo.value = "";
-    }
-}
+const caracteres = document.getElementById('carac');
+const resultadoCaracteres = document.getElementById('resultado2');
+caracteres.addEventListener('input', () => {
+  const quantidade = caracteres.value.replaceAll(' ', '').length;
+  resultadoCaracteres.textContent = `${quantidade} caracteres`;
+});
 
-//Contador de Carac
-let carac = document.getElementById("carac");
-let resultado2 = document.getElementById("resultado2");
-
-carac.oninput = function(){
-    let texto = carac.value;
-    let semEspacos = texto.replaceAll(" ","");
-    let quantidade = semEspacos.length;
-    document.getElementById("resultado2").innerHTML = quantidade + " caracteres";
-}
-
-//Add Item
-
-let opcoes = document.getElementById("opcoes");
-let li = document.getElementById("li");
-let ul = document.getElementById("ul");
-let campo = document.getElementById("campo");
-let add = document.getElementById("add");
-let reset = document.getElementById("reset");
-
-add.onclick = function(){
-    let texto = campo.value
-    let tipo = opcoes.value
-    let lista = document.createElement(tipo);
-    let item = document.createElement("li");
-    
-
-    //document.createElement("ul");
-}
-
-
-
-
-
-
+const campoItem = document.getElementById('campo');
+const resultadoLista = document.getElementById('resultado3');
+document.getElementById('add').addEventListener('click', () => {
+  const texto = campoItem.value.trim();
+  if (!texto) return;
+  const tipo = document.getElementById('opcoes').value === 'ol' ? 'ol' : 'ul';
+  const lista = document.createElement(tipo);
+  const item = document.createElement('li');
+  item.textContent = texto;
+  lista.appendChild(item);
+  resultadoLista.appendChild(lista);
+  campoItem.value = '';
+});
+document.getElementById('reset').addEventListener('click', () => {
+  cliques = 0;
+  atualizarContador(0);
+  resultadoLista.replaceChildren();
+  resultadoTexto.textContent = '';
+  resultadoCaracteres.textContent = '';
+  entradaTexto.value = caracteres.value = campoItem.value = '';
+});

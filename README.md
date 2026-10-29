@@ -31,3 +31,11 @@ As pastas foram agrupadas por finalidade. O conteúdo interno de cada atividade 
 As dependências geradas em `node_modules` não são versionadas. Nas pastas com `package-lock.json`, utilize `npm ci`; nas demais pastas com `package.json`, utilize `npm install`. Os arquivos de dependências foram preservados.
 
 O CRUD está em `projetos/crud`; depois de configurar seu banco MySQL, instale as dependências nessa pasta e execute `npm start`.
+
+## Execução do cadastro de usuários
+
+O exemplo em `projetos/crud` implementa cadastro, não todas as operações de CRUD. O servidor usa `/api/users`, interpreta JSON antes das rotas e mantém o pool MySQL aberto para as requisições. Configure as variáveis listadas em `.env.example`; credenciais não devem ficar no código. O banco precisa ter a tabela `users` com as colunas `id`, `nome` e `email`.
+
+## Guia do código
+
+Consulte [GUIA_CODIGO.md](GUIA_CODIGO.md) para localizar os módulos, entender as convenções e estudar as alterações.

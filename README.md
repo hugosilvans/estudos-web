@@ -35,7 +35,3 @@ O CRUD está em `projetos/crud`; depois de configurar seu banco MySQL, instale a
 ## Execução do cadastro de usuários
 
 O exemplo em `projetos/crud` implementa cadastro, não todas as operações de CRUD. O servidor usa `/api/users`, interpreta JSON antes das rotas e mantém o pool MySQL aberto para as requisições. Configure as variáveis listadas em `.env.example`; credenciais não devem ficar no código. O banco precisa ter a tabela `users` com as colunas `id`, `nome` e `email`.
-
-## Guia do código
-
-Consulte [GUIA_CODIGO.md](GUIA_CODIGO.md) para localizar os módulos, entender as convenções e estudar as alterações.
